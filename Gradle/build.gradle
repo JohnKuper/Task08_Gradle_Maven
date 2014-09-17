@@ -1,0 +1,48 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = 'com.johnkuper.main.MainClass'
+
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
+
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile 'org.hibernate:hibernate-entitymanager:4.2.2.Final'
+	compile 'mysql:mysql-connector-java:5.1.25'
+    compile 'ch.qos.logback:logback-classic:1.1.2'
+	compile 'ma.glasnost.orika:orika-core:1.4.5'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+		resources {
+            srcDir 'src'
+        }
+    }
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}
+
+jar {
+    manifest.attributes("Main-Class": mainClassName);
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.12'
+}
