@@ -7,7 +7,7 @@ mainClassName = 'com.johnkuper.main.MainClass'
 sourceCompatibility = JavaVersion.VERSION_1_7
 targetCompatibility = JavaVersion.VERSION_1_7
 
-version = '1.0'
+version = '1.1'
 
 repositories {
     mavenCentral()
