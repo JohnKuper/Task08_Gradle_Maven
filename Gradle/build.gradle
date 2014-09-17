@@ -39,7 +39,12 @@ uploadArchives {
     }
 }
 
-jar {
+task copyToLib( type: Copy ) {
+    into "$buildDir/libs"
+    from configurations.runtime
+}
+
+jar { dependsOn copyToLib
     manifest.attributes("Main-Class": mainClassName);
 }
 
