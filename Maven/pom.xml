@@ -43,9 +43,6 @@
 						</goals>
 						<configuration>
 							<outputDirectory>${jar.dir}/lib</outputDirectory>
-							<overWriteReleases>false</overWriteReleases>
-							<overWriteSnapshots>false</overWriteSnapshots>
-							<overWriteIfNewer>true</overWriteIfNewer>
 						</configuration>
 					</execution>
 				</executions>
