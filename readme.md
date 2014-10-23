@@ -15,4 +15,4 @@ Task08_Gradle_Maven
 
 2) Maven:
 
-mvn package - for compile and package jar file
+* mvn package - for compile and package jar file
